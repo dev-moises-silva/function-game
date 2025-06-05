@@ -12,8 +12,8 @@ export function CartesianPlane({equation, coords}: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    const ctx = canvas.getContext("2d")
+    const canvas = canvasRef.current!
+    const ctx = canvas.getContext("2d")!
     const { width, height } = canvas
     const midX = width / 2
     const midY = height / 2
